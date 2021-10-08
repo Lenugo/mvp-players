@@ -1,0 +1,14 @@
+.nav__container {
+  background-color: #041e42;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+
+  a {
+    color: white;
+    padding-left: 3rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bolder;
+  }
+}

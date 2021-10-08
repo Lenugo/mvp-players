@@ -1,21 +1,88 @@
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.players__container {
+.players {
   background: linear-gradient(0deg, rgba(198, 209, 225, 1) 20%, rgba(11, 59, 122, 1) 80%);
   width: 100%;
-  height: 100vh;
+  height: 95vh;
 
-  .players__layout {
+  .players-layout {
     background-color: white;
-    width: 80%;
+    width: 60%;
     height: 100%;
     margin: auto;
 
-    h2 {
+    .players__header {
+      margin: 0 auto;
+      width: 80%;
+      padding: 4rem 0;
       color: black;
+
+      .players__header-title {
+        padding-bottom: 2rem;
+      }
+
+      .players__header-description {
+        font-size: larger;
+      }
+
+      .players__header-league {
+        width: 360px;
+        height: 54px;
+        background-color: red;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 34px auto;
+
+        .players__header-league--text {
+          color: white;
+          font-size: x-large;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .players__content {
+      width: 100%;
+      height: max-content;
+      overflow: auto;
+      height: 50vh;
+
+      .players__content-table {
+        width: 90%;
+        table-layout: fixed;
+        border-spacing: 0.5rem;
+        border-collapse: collapse;
+        margin: auto;
+
+        .table--th,
+        .table--td {
+          padding: 0.5rem;
+          text-align: center;
+          letter-spacing: 2px;
+          padding: 8px;
+        }
+
+        .table--th:first-child,
+        .table--td:first-child {
+          text-align: center;
+          width: 120px;
+          border-right-width: 2px;
+          border-right-style: double;
+          border-right-color: gray;
+        }
+
+        .table--td {
+          cursor: pointer;
+          padding: 12px 0;
+        }
+      }
     }
   }
 }
