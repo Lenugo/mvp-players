@@ -10,14 +10,22 @@ $bg-gray: #e3e3e3;
     width: 80%;
     height: 100%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .profile__header {
       width: 100%;
       height: 40%;
+      background-image: url("../images/arod_bg.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
     }
     .profile__content {
       width: 100%;
       height: 50%;
+      background-color: red;
     }
   }
 }
