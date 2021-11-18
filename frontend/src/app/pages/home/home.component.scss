@@ -1,37 +1,33 @@
+@mixin leagueContainer($color) {
+  display: grid;
+  background-color: $color;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+}
+
 .leagues {
   display: flex;
   height: 100vh;
   width: 100%;
   flex-direction: column;
 
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
+
   .national {
-    display: grid;
-    background-color: #041e42;
-    background-image: url("../images/national-logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    justify-items: center;
+    @include leagueContainer(#041e42);
   }
 
   .american {
-    display: grid;
-    background-image: url("../images/american-logo.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #bf0d3e;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    justify-items: center;
+    @include leagueContainer(#bf0d3e);
   }
-}
 
-@media screen and (min-width: 768px) {
-  .leagues {
-    display: flex;
-    flex-direction: row;
+  .league--logo {
+    cursor: pointer;
+    width: 40%;
   }
 }
