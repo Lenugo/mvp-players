@@ -10,10 +10,16 @@
     border-radius: 1em;
     background-color: white;
     width: 60%;
-    height: 70%;
+    height: 60%;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr 8rem;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+    @media screen and (max-width: 999px) {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
 
     .profile__header {
       display: flex;
@@ -22,6 +28,12 @@
       width: 100%;
       height: 100%;
       margin: auto;
+
+      @media screen and (max-width: 999px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
 
       .profile--img {
         border-radius: 1em;
@@ -39,14 +51,13 @@
         .header__info-title {
           font-size: 2em;
           font-weight: 900;
-          margin-bottom: 0.5em;
+          margin-bottom: 0.4em;
         }
 
         .header__info-data {
           display: grid;
           height: 100%;
           grid-row: auto;
-          gap: 1em;
 
           .player--info {
             font-weight: bolder;
@@ -60,23 +71,44 @@
         display: grid;
         grid-row: auto;
 
+        @media screen and (max-width: 999px) {
+          height: auto;
+          display: flex;
+          width: 50%;
+          justify-content: space-around;
+        }
+
         .logo--content {
           border-radius: 50%;
           border: 8px solid #1c2642;
-          width: 100px;
-          height: 100px;
+          width: 6rem;
+          height: 6rem;
           display: flex;
           align-items: center;
           justify-content: center;
 
+          @media screen and (max-width: 999px) {
+            width: 4rem;
+            height: 4rem;
+          }
+
           .team--logo {
-            width: 60px;
-            height: 60px;
+            width: 3.6rem;
+            height: 3.6rem;
+
+            @media screen and (max-width: 999px) {
+              width: 2rem;
+              height: 2rem;
+            }
           }
 
           .jersey--number {
             font-size: 3rem;
             font-weight: bolder;
+
+            @media screen and (max-width: 999px) {
+              font-size: 2em;
+            }
           }
         }
       }
@@ -86,9 +118,30 @@
       width: 100%;
       height: 100%;
 
+      @media screen and (max-width: 999px) {
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+          width: 0.1em;
+        }
+
+        &::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          border-radius: 0.4em;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #bf0d3e;
+          border-radius: 0.4em;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+          outline: 1px groove #bf0d3e;
+        }
+      }
+
       .profile__table {
         width: 100%;
-        min-width: fit-content;
         border-collapse: collapse;
 
         .table--thead {
