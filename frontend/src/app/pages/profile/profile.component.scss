@@ -9,10 +9,10 @@
   .profile-layout {
     border-radius: 1em;
     background-color: white;
-    width: 60%;
-    height: 60%;
+    width: 54%;
+    height: 68%;
     display: grid;
-    grid-template-rows: 1fr 8rem;
+    grid-template-rows: 1fr 7rem;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 
     @media screen and (max-width: 999px) {
@@ -46,7 +46,6 @@
         flex-basis: 340px;
         height: 70%;
         flex-direction: column;
-        // background-color: aqua;
 
         .header__info-title {
           font-size: 2em;
